@@ -1,0 +1,88 @@
+// FONTS
+@font-face
+  font-family: "caviar_dreamsbold"
+  src: url('../fonts/caviar/Caviar_Dreams_Bold-webfont.woff') format('woff')
+  src: url('../fonts/caviar/CaviarDreams_Bold.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: "caviar_dreams"
+  src: url('../fonts/caviar/CaviarDreams-webfont.woff') format('woff')
+  src: url('../fonts/caviar/CaviarDreams.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+$cairo: 'Cairo', sans-serif
+$tajawal: 'Tajawal', sans-serif
+$caviar_bold: 'caviar_dreamsbold'
+$caviar: 'caviar_dreams'
+
+//$green: #4EA05B
+$red: #CF2127
+
+a
+  text-decoration: none
+
+ul
+  margin: 0px
+  padding: 0px
+  list-style: none
+
+p,h2,h1
+  margin: 0px
+
+body, html
+  padding: 0px
+  margin: 0px
+
+*
+  box-sizing: border-box
+
+body
+  background: #2A2A2A
+  padding-left: 50px
+
+.sidebar
+  position: fixed
+  top: 0px
+  left: 0px
+  width: 50px
+  height: 100%
+  background: #464646
+  text-align: center
+  padding: 50px 0px
+  .home
+    position: relative
+    margin: 0px auto !important
+    &::after
+      content: ""
+      display: block
+      height: 100px
+      width: 1px
+      display: block
+      background: #FFF
+      margin: 20px auto
+  a
+    display: block
+    margin: 10px auto
+    img
+      width: 16px
+
+.top
+  display: block
+  height: 50px
+  text-align: right
+  ul
+    display: inline-block
+    li
+      display: block
+      a
+        display: block
+        line-height: 35px
+        background: #FFF
+        color: #2A2A2A
+        font-family: $cairo
+        img
+          vertical-align: middle
+          height: 20px
