@@ -1,0 +1,207 @@
+// FONTS
+@font-face
+  font-family: "caviar_dreamsbold"
+  src: url('../fonts/caviar/Caviar_Dreams_Bold-webfont.woff') format('woff')
+  src: url('../fonts/caviar/CaviarDreams_Bold.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: "caviar_dreams"
+  src: url('../fonts/caviar/CaviarDreams-webfont.woff') format('woff')
+  src: url('../fonts/caviar/CaviarDreams.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+$cairo: 'Cairo', sans-serif
+$tajawal: 'Tajawal', sans-serif
+$caviar_bold: 'caviar_dreamsbold'
+$caviar: 'caviar_dreams'
+
+//$green: #4EA05B
+$red: #CF2127
+$yellow: #FFE600
+a
+  text-decoration: none
+
+ul
+  margin: 0px
+  padding: 0px
+  list-style: none
+
+p,h2,h1
+  margin: 0px
+
+body, html
+  padding: 0px
+  margin: 0px
+
+*
+  box-sizing: border-box
+
+body
+  background: #2A2A2A
+  padding-left: 50px
+  position: relative
+  min-height: 100vh
+  @media screen and (max-width: 320px)
+    padding-left: 0px
+    padding-top: 50px
+  &::after
+    content: ""
+    position: absolute
+    top: 0px
+    left: 0px
+    width: 100%
+    height: 100%
+    background: url("../img/bg.jpg")
+    opacity: 0.2
+    background-position: bottom right
+    background-size: cover
+    background-repeat: no-repeat
+    z-index: -1
+.sidebar
+  position: fixed
+  top: 0px
+  left: 0px
+  width: 50px
+  height: 100%
+  background: #464646
+  text-align: center
+  padding: 50px 0px
+  .home
+    position: relative
+    margin: 0px auto !important
+    &::after
+      content: ""
+      display: block
+      height: 100px
+      width: 1px
+      display: block
+      background: #FFF
+      margin: 20px auto
+  a
+    display: block
+    margin: 10px auto
+    img
+      width: 16px
+  @media screen and (max-width: 320px)
+    width: 100%
+    height: 50px
+    line-height: 50px
+    padding: 0px 20px
+    text-align: left
+    a
+      display: inline-block
+      margin: 0px
+      margin-right: 10px
+      img
+        vertical-align: middle
+    .home
+      &::after
+        display: inline-block
+        height: 1px
+        width: 20px
+        vertical-align: middle
+        margin: 0px 5px
+.top
+  display: block
+  height: 50px
+  text-align: right
+  padding: 20px 20px
+  ul
+    display: inline-block
+    li
+      display: block
+      position: relative
+      padding-bottom: 5px
+      z-index: 2
+      a
+        display: block
+        line-height: 35px
+        background: #FFF
+        color: #2A2A2A
+        font-family: $cairo
+        padding: 0px 20px
+        border-radius: 30px
+        font-size: 13px
+        font-weight: 700
+        cursor: pointer
+        text-align: center
+        img
+          vertical-align: middle
+          height: 20px
+      ul
+        position: absolute
+        top: 100%
+        right: 0px
+        z-index: 99
+        width: max-content
+        display: none
+      &:hover
+        ul
+          display: block
+          animation-name: slideLeft
+          animation-duration: 0.2s
+          opacity: 0
+          animation-timing-function: linear
+          animation-fill-mode: forwards
+          @keyframes slideLeft
+            0%
+              opacity: 0
+              right: -20px
+            80%
+              right: 5px
+            100%
+              right: 0px
+              opacity: 1
+        li
+          a
+            padding: 0px 10px
+.content
+  position: relative
+  padding-bottom: 30px
+  &::after
+    content: ""
+    position: absolute
+    bottom: 0px
+    left: 50%
+    transform: translateX(-50%)
+    width: 1px
+    height: 30px
+    border-right: 1px $yellow dashed
+  .logo
+    display: block
+    margin: 0px auto
+    margin-bottom: 50px
+  p
+    display: block
+    max-width: 500px
+    margin: 0px auto
+    font-family: $caviar
+    color: #FFF
+    font-size: 25px
+    margin-bottom: 20px
+    text-align: center
+    &:last-child
+      margin-bottom: 0px
+    @media screen and (max-width: 590px)
+      font-size: 20px
+      max-width: 300px
+    @media screen and (max-width: 360px)
+      max-width: 250px
+      font-size: 17px
+    span
+      color: $yellow
+  .expect
+    font-family: $caviar
+    color: #FFF
+    font-size: 25px
+    margin: 40px auto
+    width: fit-content
+    text-align: center
+    line-height: 80px
+    span
+      display: inline-block
+      border: 1px $yellow solid
+      padding: 0px 20px

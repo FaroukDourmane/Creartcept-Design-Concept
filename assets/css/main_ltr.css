@@ -1,0 +1,247 @@
+@font-face {
+  font-family: "caviar_dreamsbold";
+  src: url("../fonts/caviar/Caviar_Dreams_Bold-webfont.woff") format("woff");
+  src: url("../fonts/caviar/CaviarDreams_Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "caviar_dreams";
+  src: url("../fonts/caviar/CaviarDreams-webfont.woff") format("woff");
+  src: url("../fonts/caviar/CaviarDreams.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+p, h2, h1 {
+  margin: 0px;
+}
+
+body, html {
+  padding: 0px;
+  margin: 0px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #2A2A2A;
+  padding-left: 50px;
+  position: relative;
+  min-height: 100vh;
+}
+@media screen and (max-width: 320px) {
+  body {
+    padding-left: 0px;
+    padding-top: 50px;
+  }
+}
+body::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/bg.jpg");
+  opacity: 0.2;
+  background-position: bottom right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 50px;
+  height: 100%;
+  background: #464646;
+  text-align: center;
+  padding: 50px 0px;
+}
+.sidebar .home {
+  position: relative;
+  margin: 0px auto !important;
+}
+.sidebar .home::after {
+  content: "";
+  display: block;
+  height: 100px;
+  width: 1px;
+  display: block;
+  background: #FFF;
+  margin: 20px auto;
+}
+.sidebar a {
+  display: block;
+  margin: 10px auto;
+}
+.sidebar a img {
+  width: 16px;
+}
+@media screen and (max-width: 320px) {
+  .sidebar {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding: 0px 20px;
+    text-align: left;
+  }
+  .sidebar a {
+    display: inline-block;
+    margin: 0px;
+    margin-right: 10px;
+  }
+  .sidebar a img {
+    vertical-align: middle;
+  }
+  .sidebar .home::after {
+    display: inline-block;
+    height: 1px;
+    width: 20px;
+    vertical-align: middle;
+    margin: 0px 5px;
+  }
+}
+
+.top {
+  display: block;
+  height: 50px;
+  text-align: right;
+  padding: 20px 20px;
+}
+.top ul {
+  display: inline-block;
+}
+.top ul li {
+  display: block;
+  position: relative;
+  padding-bottom: 5px;
+  z-index: 2;
+}
+.top ul li a {
+  display: block;
+  line-height: 35px;
+  background: #FFF;
+  color: #2A2A2A;
+  font-family: "Cairo", sans-serif;
+  padding: 0px 20px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+}
+.top ul li a img {
+  vertical-align: middle;
+  height: 20px;
+}
+.top ul li ul {
+  position: absolute;
+  top: 100%;
+  right: 0px;
+  z-index: 99;
+  width: max-content;
+  display: none;
+}
+.top ul li:hover ul {
+  display: block;
+  animation-name: slideLeft;
+  animation-duration: 0.2s;
+  opacity: 0;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    right: -20px;
+  }
+  80% {
+    right: 5px;
+  }
+  100% {
+    right: 0px;
+    opacity: 1;
+  }
+}
+.top ul li:hover li a {
+  padding: 0px 10px;
+}
+
+.content {
+  position: relative;
+  padding-bottom: 30px;
+}
+.content::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 30px;
+  border-right: 1px #FFE600 dashed;
+}
+.content .logo {
+  display: block;
+  margin: 0px auto;
+  margin-bottom: 50px;
+}
+.content p {
+  display: block;
+  max-width: 500px;
+  margin: 0px auto;
+  font-family: "caviar_dreams";
+  color: #FFF;
+  font-size: 25px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.content p:last-child {
+  margin-bottom: 0px;
+}
+@media screen and (max-width: 590px) {
+  .content p {
+    font-size: 20px;
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .content p {
+    max-width: 250px;
+    font-size: 17px;
+  }
+}
+.content p span {
+  color: #FFE600;
+}
+.content .expect {
+  font-family: "caviar_dreams";
+  color: #FFF;
+  font-size: 25px;
+  margin: 40px auto;
+  width: fit-content;
+  text-align: center;
+  line-height: 80px;
+}
+.content .expect span {
+  display: inline-block;
+  border: 1px #FFE600 solid;
+  padding: 0px 20px;
+}
+
+/*# sourceMappingURL=main_ltr.css.map */

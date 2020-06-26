@@ -17,20 +17,13 @@
     "align" => "left",
     "home" => "Home",
     "lang_prefix" => "en",
-
-    "who_we_are" => "Who we are",
-    "our_services" => "Our services",
-    "references" => "References",
-    "contact_us" => "Contact us",
-    "for_all_what_you_need" => "For all what you need",
-    "radar_group" => "Radar group",
-
-    // Services
-    "touristic_services" => "Tourist services",
-    "business_services" => "commercial services",
-    "ads_services" => "Advertising services",
-    "houses_services" => "Real estate services",
-    "cars_services" => "Car services",
-    "consulting_services" => "Consulting services",
+    "expect_us" => "EXPECT US",
+    "soon" => "SOON",
+    "about_company" => "is a new modern company located in Turkey
+    We provide several services such as web design , graphic design...",
+    "our_goal" => "Our goal",
+    "goal_text" => "is to provide better quality to increase bigger companies' values & make small companies bigger.",
+    "our_mission" => "our mission",
+    "mission_text" => "Developing each client vision is",
   ];
 ?>
